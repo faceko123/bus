@@ -42,7 +42,7 @@ body {
 
 video {
     width: 75vw;
-    margin-bottom: 300px; /* Khoảng cách giữa các video = ~5 dòng */
+    margin-bottom: 20px;
 }
 
 .back-button {
