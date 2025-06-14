@@ -1,29 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <style>
-        body {
-            background-color: black;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0;
-            padding: 20px;
-        }
-        video {
-            width: 75vw;
-            height: auto;
-            margin-bottom: 20px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-        }
-    </style>
+    <title>Video theo phần</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <video src="1.mp4" controls loop></video>
-    <video src="2.mp4" controls loop></video>
-    <video src="3.mp4" controls loop></video>
-    <video src="4.mp4" controls loop></video>
-    <video src="5.mp4" controls loop></video>
+    <h1>Chọn phần</h1>
+    <div class="menu" id="mainMenu">
+        <button onclick="showSection('part1')">Phần 1</button>
+        <button onclick="showSection('part2')">Phần 2</button>
+        <button onclick="showSection('part3')">Phần 3</button>
+    </div>
+
+    <!-- PHẦN 1 -->
+    <div class="section" id="part1">
+        <video src="1.mp4" controls loop></video>
+        <video src="2.mp4" controls loop></video>
+        <div class="back-button" onclick="goBack()">← Quay lại Trang chủ</div>
+    </div>
+
+    <!-- PHẦN 2 -->
+    <div class="section" id="part2">
+        <video src="3.mp4" controls loop></video>
+        <video src="4.mp4" controls loop></video>
+        <div class="back-button" onclick="goBack()">← Quay lại Trang chủ</div>
+    </div>
+
+    <!-- PHẦN 3 -->
+    <div class="section" id="part3">
+        <video src="5.mp4" controls loop></video>
+        <div class="back-button" onclick="goBack()">← Quay lại Trang chủ</div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
