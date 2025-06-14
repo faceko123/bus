@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
     <meta charset="utf-8">
     <title>Video theo phần</title>
@@ -7,27 +7,29 @@
 </head>
 <body>
     <h1>Chọn phần</h1>
+
+    <!-- Menu chọn phần -->
     <div class="menu" id="mainMenu">
         <button onclick="showSection('part1')">Phần 1</button>
         <button onclick="showSection('part2')">Phần 2</button>
         <button onclick="showSection('part3')">Phần 3</button>
     </div>
 
-    <!-- PHẦN 1 -->
+    <!-- PHẦN 1: Video 1 & 2 -->
     <div class="section" id="part1">
         <video src="1.mp4" controls loop></video>
         <video src="2.mp4" controls loop></video>
         <div class="back-button" onclick="goBack()">← Quay lại Trang chủ</div>
     </div>
 
-    <!-- PHẦN 2 -->
+    <!-- PHẦN 2: Video 3 & 4 -->
     <div class="section" id="part2">
         <video src="3.mp4" controls loop></video>
         <video src="4.mp4" controls loop></video>
         <div class="back-button" onclick="goBack()">← Quay lại Trang chủ</div>
     </div>
 
-    <!-- PHẦN 3 -->
+    <!-- PHẦN 3: Video 5 -->
     <div class="section" id="part3">
         <video src="5.mp4" controls loop></video>
         <div class="back-button" onclick="goBack()">← Quay lại Trang chủ</div>
