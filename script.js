@@ -1,25 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Kích hoạt tất cả player sử dụng Plyr
     Plyr.setup('.player');
 });
 
 function navigateTo(partId) {
+    // Ẩn menu chính
     document.querySelector(".main-menu").style.display = "none";
-    document.getElementById(partId).classList.remove("hidden");
+
+    // Hiện phần đã chọn
+    document.querySelectorAll(".video-page").forEach(section => {
+        section.classList.remove("active");
+    });
+    document.getElementById(partId).classList.add("active");
 }
 
 function goBack() {
-    // Tạm dừng tất cả video
-    const videos = document.querySelectorAll("video");
-    videos.forEach(video => {
+    // Dừng tất cả video khi quay lại
+    document.querySelectorAll("video").forEach(video => {
         video.pause();
         video.currentTime = 0;
     });
 
-    // Ẩn tất cả phần video
-    document.querySelectorAll(".video-page").forEach(page => {
-        page.classList.add("hidden");
+    // Ẩn các phần video
+    document.querySelectorAll(".video-page").forEach(section => {
+        section.classList.remove("active");
     });
 
-    // Hiện menu chính
+    // Hiện lại menu chính
     document.querySelector(".main-menu").style.display = "flex";
 }
