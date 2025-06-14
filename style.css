@@ -1,27 +1,20 @@
-/* Reset mặc định */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    background-color: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    padding: 40px 20px;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
     text-align: center;
+    padding-top: 50px;
 }
 
 .main-menu {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    margin-top: 60px;
+    gap: 30px;
+    margin-top: 100px;
 }
 
 .main-menu button {
-    padding: 25px 60px;
+    padding: 30px 60px;
     font-size: 32px;
     background-color: #333;
     color: white;
@@ -39,35 +32,34 @@ body {
     display: none;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
 }
 
-.video-page.active {
-    display: flex;
-}
-
-.player {
-    width: 90vw;
-    max-width: 1280px;
-    margin: 50px 0;
+.video-page video {
+    width: 75vw;
+    max-width: 1000px;
+    margin-top: 40px;
 }
 
 .video-gap {
-    height: 100px; /* cách 5 dòng */
+    height: 100px; /* cách khoảng 5 dòng giữa 2 video */
 }
 
 .back-button {
+    margin-top: 30px;
     font-size: 30px;
     background-color: #a00;
     color: white;
     padding: 20px 50px;
     border: none;
     border-radius: 10px;
-    margin-bottom: 50px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .back-button:hover {
     background-color: #c00;
+}
+
+.hidden {
+    display: none;
 }
