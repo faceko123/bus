@@ -1,10 +1,14 @@
 function showSection(id) {
-    document.getElementById("mainMenu").style.display = "none";
+    // Ẩn tất cả các phần
+    document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+    });
 
-    const sections = document.querySelectorAll(".section");
-    sections.forEach(sec => sec.classList.remove("active"));
+    // Hiện phần được chọn
+    document.getElementById(id).classList.add('active');
 
-    document.getElementById(id).classList.add("active");
+    // Ẩn menu chính
+    document.getElementById('mainMenu').style.display = 'none';
 }
 
 function goBack() {
@@ -15,10 +19,11 @@ function goBack() {
         video.currentTime = 0; // Reset nếu muốn về đầu
     });
 
-    // Ẩn các phần
-    const sections = document.querySelectorAll(".section");
-    sections.forEach(sec => sec.classList.remove("active"));
+     // Ẩn tất cả các phần
+    document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+    });
 
-    // Hiện menu chính
-    document.getElementById("mainMenu").style.display = "flex";
+    // Hiện lại menu chính
+    document.getElementById('mainMenu').style.display = 'flex';
 }
