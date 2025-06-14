@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <title>Video Viewer</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8">
+    <title>Video theo phần</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Menu chính -->
-  <div class="main-menu">
-    <button onclick="navigateTo('part1')">Phần 1</button>
-    <button onclick="navigateTo('part2')">Phần 2</button>
-    <button onclick="navigateTo('part3')">Phần 3</button>
-  </div>
+    <h1>Chọn phần</h1>
 
-  <!-- Phần 1 -->
-  <div id="part1" class="video-page hidden">
-    <button class="back-button" onclick="goBack()">← Quay lại</button>
-    <video src="1.mp4" controls loop></video>
-    <div class="video-gap"></div>
-    <video src="2.mp4" controls loop></video>
-  </div>
+    <!-- Menu chọn phần -->
+    <div class="menu" id="mainMenu">
+        <button onclick="showSection('part1')">Phần 1</button>
+        <button onclick="showSection('part2')">Phần 2</button>
+        <button onclick="showSection('part3')">Phần 3</button>
+    </div>
 
-  <!-- Phần 2 -->
-  <div id="part2" class="video-page hidden">
-    <button class="back-button" onclick="goBack()">← Quay lại</button>
-    <video src="3.mp4" controls loop></video>
-    <div class="video-gap"></div>
-    <video src="4.mp4" controls loop></video>
-  </div>
+    <!-- PHẦN 1: Video 1 & 2 -->
+    <div class="section" id="part1">
+        <video src="1.mp4" controls loop></video>
+        <video src="2.mp4" controls loop></video>
+        <div class="back-button" onclick="goBack()">← Quay lại Trang chủ</div>
+    </div>
 
-  <!-- Phần 3 -->
-  <div id="part3" class="video-page hidden">
-    <button class="back-button" onclick="goBack()">← Quay lại</button>
-    <video src="5.mp4" controls loop></video>
-  </div>
+    <!-- PHẦN 2: Video 3 & 4 -->
+    <div class="section" id="part2">
+        <video src="3.mp4" controls loop></video>
+        <video src="4.mp4" controls loop></video>
+        <div class="back-button" onclick="goBack()">← Quay lại Trang chủ</div>
+    </div>
 
-  <script src="script.js"></script>
+    <!-- PHẦN 3: Video 5 -->
+    <div class="section" id="part3">
+        <video src="5.mp4" controls loop></video>
+        <div class="back-button" onclick="goBack()">← Quay lại Trang chủ</div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
