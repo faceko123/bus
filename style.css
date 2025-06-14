@@ -1,0 +1,54 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.menu button {
+    padding: 15px 30px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu button:hover {
+    background-color: #555;
+}
+
+.section {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section.active {
+    display: flex;
+}
+
+video {
+    width: 75vw;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    margin-top: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #ccc;
+    font-size: 16px;
+}
