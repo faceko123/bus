@@ -1,27 +1,25 @@
-// Khởi tạo tất cả video với Plyr
-document.addEventListener('DOMContentLoaded', () => {
-    const players = Plyr.setup('.plyr');
+document.addEventListener("DOMContentLoaded", () => {
+    Plyr.setup('.player');
 });
 
-function showSection(id) {
-    document.getElementById("mainMenu").style.display = "none";
-
-    const sections = document.querySelectorAll(".section");
-    sections.forEach(sec => sec.classList.remove("active"));
-
-    document.getElementById(id).classList.add("active");
+function navigateTo(partId) {
+    document.querySelector(".main-menu").style.display = "none";
+    document.getElementById(partId).classList.remove("hidden");
 }
 
 function goBack() {
-    // Dừng tất cả video Plyr
+    // Tạm dừng tất cả video
     const videos = document.querySelectorAll("video");
     videos.forEach(video => {
         video.pause();
         video.currentTime = 0;
     });
 
-    const sections = document.querySelectorAll(".section");
-    sections.forEach(sec => sec.classList.remove("active"));
+    // Ẩn tất cả phần video
+    document.querySelectorAll(".video-page").forEach(page => {
+        page.classList.add("hidden");
+    });
 
-    document.getElementById("mainMenu").style.display = "flex";
+    // Hiện menu chính
+    document.querySelector(".main-menu").style.display = "flex";
 }
