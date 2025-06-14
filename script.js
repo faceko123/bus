@@ -1,26 +1,24 @@
-function navigateTo(partId) {
-  // Ẩn menu chính
-  document.querySelector(".main-menu").style.display = "none";
+function showSection(id) {
+    document.getElementById("mainMenu").style.display = "none";
 
-  // Hiện phần được chọn
-  document.querySelectorAll(".video-page").forEach(page => {
-    page.classList.add("hidden");
-  });
-  document.getElementById(partId).classList.remove("hidden");
+    const sections = document.querySelectorAll(".section");
+    sections.forEach(sec => sec.classList.remove("active"));
+
+    document.getElementById(id).classList.add("active");
 }
 
 function goBack() {
-  // Dừng và reset tất cả video
-  document.querySelectorAll("video").forEach(video => {
-    video.pause();
-    video.currentTime = 0;
-  });
+    // Dừng tất cả video
+    const videos = document.querySelectorAll("video");
+    videos.forEach(video => {
+        video.pause();
+        video.currentTime = 0; // Reset nếu muốn về đầu
+    });
 
-  // Ẩn tất cả video-page
-  document.querySelectorAll(".video-page").forEach(page => {
-    page.classList.add("hidden");
-  });
+    // Ẩn các phần
+    const sections = document.querySelectorAll(".section");
+    sections.forEach(sec => sec.classList.remove("active"));
 
-  // Hiện lại menu chính
-  document.querySelector(".main-menu").style.display = "flex";
+    // Hiện menu chính
+    document.getElementById("mainMenu").style.display = "flex";
 }
