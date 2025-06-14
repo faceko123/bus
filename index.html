@@ -1,59 +1,52 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="utf-8">
-    <title>Video theo phần (Plyr)</title>
-
-    <!-- Plyr CSS -->
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
-
-    <!-- Custom CSS -->
+    <meta charset="UTF-8">
+    <title>Trang Chủ Video</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="plyr/plyr.css">
 </head>
 <body>
-    <h1>Chọn phần</h1>
-
-    <!-- Menu chọn phần -->
-    <div class="menu" id="mainMenu">
-        <button onclick="showSection('part1')">Phần 1</button>
-        <button onclick="showSection('part2')">Phần 2</button>
-        <button onclick="showSection('part3')">Phần 3</button>
+    <div class="main-menu">
+        <button onclick="navigateTo('part1')">Phần 1</button>
+        <button onclick="navigateTo('part2')">Phần 2</button>
+        <button onclick="navigateTo('part3')">Phần 3</button>
     </div>
 
-    <!-- PHẦN 1: Video 1 & 2 -->
-    <div class="section" id="part1">
-        <video class="plyr" id="v1" controls>
+    <div id="part1" class="video-page hidden">
+        <button class="back-button" onclick="goBack()">← Quay lại</button>
+        <video class="player" controls loop>
             <source src="1.mp4" type="video/mp4">
         </video>
-        <video class="plyr" id="v2" controls>
+
+        <div class="video-gap"></div>
+
+        <video class="player" controls loop>
             <source src="2.mp4" type="video/mp4">
         </video>
-        <div class="back-button" onclick="goBack()">← Quay lại Trang chủ</div>
     </div>
 
-    <!-- PHẦN 2: Video 3 & 4 -->
-    <div class="section" id="part2">
-        <video class="plyr" id="v3" controls>
+    <div id="part2" class="video-page hidden">
+        <button class="back-button" onclick="goBack()">← Quay lại</button>
+        <video class="player" controls loop>
             <source src="3.mp4" type="video/mp4">
         </video>
-        <video class="plyr" id="v4" controls>
+
+        <div class="video-gap"></div>
+
+        <video class="player" controls loop>
             <source src="4.mp4" type="video/mp4">
         </video>
-        <div class="back-button" onclick="goBack()">← Quay lại Trang chủ</div>
     </div>
 
-    <!-- PHẦN 3: Video 5 -->
-    <div class="section" id="part3">
-        <video class="plyr" id="v5" controls>
+    <div id="part3" class="video-page hidden">
+        <button class="back-button" onclick="goBack()">← Quay lại</button>
+        <video class="player" controls loop>
             <source src="5.mp4" type="video/mp4">
         </video>
-        <div class="back-button" onclick="goBack()">← Quay lại Trang chủ</div>
     </div>
 
-    <!-- Plyr JS -->
-    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
-
-    <!-- Custom JS -->
+    <script src="plyr/plyr.polyfilled.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
