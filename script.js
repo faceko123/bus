@@ -10,12 +10,11 @@ function showSection(id) {
         section.classList.remove('active');
     });
 
-    // Hiện phần được chọn
+    // Hiện section được chọn
     document.getElementById(id).classList.add('active');
 }
 
 function goBack() {
-    // Dừng video
     document.querySelectorAll("video").forEach(video => {
         video.pause();
         video.currentTime = 0;
@@ -36,8 +35,11 @@ function showAlbum(albumId) {
         album.classList.remove('active');
     });
 
-    // Ẩn phần ảnh bìa
-    document.getElementById('part1Images').classList.remove('active');
+    // Ẩn tất cả phần ảnh
+    ['part1Images', 'part2Images', 'part3Images'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.remove('active');
+    });
 
     // Hiện album tương ứng
     document.getElementById(albumId).classList.add('active');
