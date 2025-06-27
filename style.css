@@ -9,24 +9,26 @@ body {
     padding: 20px;
 }
 
-.menu {
+.menu, .section {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: 30px;
 }
 
-.menu button {
-    padding: 30px 60px; /* To gấp 5 */
+.menu button, .section button {
+    padding: 30px 60px;
     background-color: #333;
     color: white;
     border: none;
     border-radius: 10px;
-    font-size: 30px; /* To gấp 5 */
+    font-size: 30px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.menu button:hover {
+.menu button:hover, .section button:hover {
     background-color: #555;
 }
 
@@ -50,5 +52,18 @@ video {
     text-decoration: underline;
     cursor: pointer;
     color: #ccc;
-    font-size: 30px; /* To gấp 5 */
+    font-size: 30px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.image-grid img {
+    width: 25vw;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
 }
