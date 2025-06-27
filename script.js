@@ -44,3 +44,26 @@ function showAlbum(albumId) {
     // Hiện album tương ứng
     document.getElementById(albumId).classList.add('active');
 }
+// Gán sự kiện click cho ảnh trong album để mở lightbox
+document.addEventListener('DOMContentLoaded', () => {
+    const albumImages = document.querySelectorAll('.album img');
+    albumImages.forEach(img => {
+        img.addEventListener('click', () => {
+            showLightbox(img.src);
+        });
+    });
+});
+
+function showLightbox(src) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightboxImg.src = src;
+    lightbox.style.display = 'flex';
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none';
+    document.getElementById('lightbox-img').src = '';
+}
+
