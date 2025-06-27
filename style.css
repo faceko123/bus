@@ -1,46 +1,81 @@
-function showSection(id) {
-    // Dừng video
-    document.querySelectorAll("video").forEach(video => {
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Ẩn tất cả section
-    document.querySelectorAll('.section').forEach(section => {
-        section.classList.remove('active');
-    });
-
-    // Hiện section được chọn
-    document.getElementById(id).classList.add('active');
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
-function goBack() {
-    document.querySelectorAll("video").forEach(video => {
-        video.pause();
-        video.currentTime = 0;
-    });
-
-    // Ẩn tất cả
-    document.querySelectorAll('.section').forEach(section => {
-        section.classList.remove('active');
-    });
-
-    // Hiện lại menu chính
-    document.getElementById('mainMenu').style.display = 'flex';
+.menu, .section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
-function showAlbum(albumId) {
-    // Ẩn tất cả album
-    document.querySelectorAll('.album').forEach(album => {
-        album.classList.remove('active');
-    });
+.menu button, .section button {
+    padding: 30px 60px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-    // Ẩn tất cả phần ảnh
-    ['part1Images', 'part2Images', 'part3Images'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.classList.remove('active');
-    });
+.menu button:hover, .section button:hover {
+    background-color: #555;
+}
 
-    // Hiện album tương ứng
-    document.getElementById(albumId).classList.add('active');
+.section {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section.active {
+    display: flex;
+}
+
+video {
+    width: 75vw;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    background-color: rgba(50, 50, 50, 0.8);
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.album img {
+    cursor: default;
 }
