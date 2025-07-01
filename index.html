@@ -13,6 +13,7 @@
         <button onclick="showSection('part1Menu')">Phần 1</button>
         <button onclick="showSection('part2Menu')">Phần 2</button>
         <button onclick="showSection('part3Menu')">Phần 3</button>
+        <button onclick="showSection('part4Menu')">Phần 4</button>
     </div>
 
     <!-- Menu phụ -->
@@ -29,6 +30,11 @@
     <div class="section" id="part3Menu">
         <button onclick="showSection('part3Images')">Ảnh</button>
         <button onclick="showSection('part3Videos')">Video</button>
+    </div>
+    
+    <div class="section" id="part4Menu">
+        <button onclick="showSection('part4Images')">Ảnh</button>
+        <button onclick="showSection('part4Videos')">Video</button>
     </div>
 
     <!-- PHẦN 1 - ẢNH -->
@@ -115,7 +121,12 @@
 
     <!-- PHẦN 2 - VIDEO -->
     <div class="section" id="part2Videos">
-        <video src="video/m1.mp4" controls loop></video>
+        <video src="video/a1.mp4" controls loop></video>
+        <video src="video/a2.mp4" controls loop></video>
+        <video src="video/a3.mp4" controls loop></video>
+        <video src="video/a4.mp4" controls loop></video>
+        <video src="video/a5.mp4" controls loop></video>
+        <video src="video/a6.mp4" controls loop></video>
     </div>
 
     <!-- PHẦN 3 - ẢNH -->
@@ -157,11 +168,54 @@
 
     <!-- PHẦN 3 - VIDEO -->
     <div class="section" id="part3Videos">
-        <video src="video/v1.mp4" controls loop></video>
+        <video src="video/van1.mp4" controls loop></video>
         <video src="video/van2.mp4" controls loop></video>
+        <video src="video/van3.mp4" controls loop></video>
         <video src="video/1.mp4" controls loop></video>
     </div>
 
+    <!-- PHẦN 4 - ẢNH -->
+    <div class="section" id="part4Images">
+        <div class="image-grid">
+            <img src="images/thumb7.jpg" onclick="showAlbum('album10')">
+            <img src="images/thumb8.jpg" onclick="showAlbum('album11')">
+            <img src="images/thumb9.jpg" onclick="showAlbum('album12')">
+        </div>
+    </div>
+
+    <div class="section album" id="album10">
+        <div class="image-grid">
+            <img src="images/album10-1.jpg">
+            <img src="images/album10-2.jpg">
+            <img src="images/album10-3.jpg">
+            <img src="images/album10-4.jpg">
+            <img src="images/album10-5.jpg">
+        </div>
+    </div>
+    <div class="section album" id="album11">
+        <div class="image-grid">
+            <img src="images/album11-1.jpg">
+            <img src="images/album11-2.jpg">
+            <img src="images/album11-3.jpg">
+            <img src="images/album11-4.jpg">
+            <img src="images/album11-5.jpg">
+        </div>
+    </div>
+    <div class="section album" id="album12">
+        <div class="image-grid">
+            <img src="images/album12-1.jpg">
+            <img src="images/album12-2.jpg">
+            <img src="images/album12-3.jpg">
+            <img src="images/album12-4.jpg">
+            <img src="images/album12-5.jpg">
+        </div>
+    </div>
+
+    <!-- PHẦN 4 - VIDEO -->
+    <div class="section" id="part4Videos">
+        <video src="video/1.mp4" controls loop></video>
+    </div>
+    
     <!-- Nút quay lại cố định -->
     <div class="back-button" onclick="goBack()">← Quay lại</div>
 
