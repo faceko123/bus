@@ -36,12 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.querySelectorAll('.video-thumb video').forEach(video => {
-    video.addEventListener('click', () => {
-        if (video.paused) {
-            video.play();
-        } else {
-            video.pause();
+document.querySelectorAll('.video-thumb').forEach(thumb => {
+    thumb.addEventListener('click', () => {
+        const videoSrc = thumb.getAttribute('data-src');
+        if (videoSrc) {
+            const win = window.open(videoSrc, '_blank');
+            if (win) win.focus();
         }
     });
 });
