@@ -8,6 +8,11 @@ function showSection(id) {
     });
     const section = document.getElementById(id);
     if (section) section.classList.add('active');
+    if (id === "specialVideos") {
+        document.querySelectorAll('#specialVideos video').forEach(video => {
+            video.play();
+        });
+    }
 }
 
 function goBack() {
