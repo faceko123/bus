@@ -1,5 +1,5 @@
 function showSection(id) {
-    // Dừng video
+    // Dừng tất cả video khi chuyển section
     document.querySelectorAll("video").forEach(video => {
         video.pause();
         video.currentTime = 0;
@@ -10,23 +10,37 @@ function showSection(id) {
         section.classList.remove('active');
     });
 
+    // Ẩn menu chính nếu không quay lại
+    if (id !== "mainMenu") {
+        document.getElementById("mainMenu").style.display = "none";
+    }
+
     // Hiện section được chọn
-    document.getElementById(id).classList.add('active');
+    const section = document.getElementById(id);
+    if (section) section.classList.add('active');
+
+    // Nếu là phần đặc biệt video thì đảm bảo phát lại
+    if (id === "specialVideos") {
+        document.querySelectorAll('#specialVideos video').forEach(video => {
+            video.play();
+        });
+    }
 }
 
 function goBack() {
+    // Dừng tất cả video
     document.querySelectorAll("video").forEach(video => {
         video.pause();
         video.currentTime = 0;
     });
 
-    // Ẩn tất cả
+    // Ẩn tất cả section
     document.querySelectorAll('.section').forEach(section => {
         section.classList.remove('active');
     });
 
     // Hiện lại menu chính
-    document.getElementById('mainMenu').style.display = 'flex';
+    document.getElementById("mainMenu").style.display = "flex";
 }
 
 function showAlbum(albumId) {
@@ -35,22 +49,22 @@ function showAlbum(albumId) {
         album.classList.remove('active');
     });
 
-    // Ẩn tất cả phần ảnh
+    // Ẩn tất cả phần ảnh của các phần
     ['part1Images', 'part2Images', 'part3Images'].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.classList.remove('active');
     });
 
-    // Hiện album tương ứng
+    // Hiện album được chọn
     document.getElementById(albumId).classList.add('active');
 }
-// Gán sự kiện click cho ảnh trong album để mở lightbox
+
+// Gán sự kiện click ảnh trong album để mở lightbox (nếu có)
 document.addEventListener('DOMContentLoaded', () => {
     const albumImages = document.querySelectorAll('.album img');
     albumImages.forEach(img => {
         img.addEventListener('click', () => {
-            showLightbox(img.src);
+            showLightbox(img.src); // Hàm showLightbox phải được định nghĩa nếu bạn muốn mở ảnh to
         });
     });
 });
-
