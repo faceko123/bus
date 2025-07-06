@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Phần 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Phần 2</h1>
+    
+    <div class="menu">
+        <button onclick="showSection('part2Images')">Ảnh</button>
+        <button onclick="showSection('part2Videos')">Video</button>
+    </div>
+
+    <!-- PHẦN 2 - ẢNH -->
+    <div class="section" id="part2Images">
+        <div class="image-grid">
+            <img src="anh/a/anh1/1.jpg" onclick="showAlbum('album4')">
+            <img src="anh/t/anh/1.jpg" onclick="showAlbum('album5')">
+            <img src="anh/t/anh/1.jpg" onclick="showAlbum('album6')">
+        </div>
+    </div>
+
+    <div class="section album" id="album4">
+        <div class="image-grid">
+            <img src="anh/a/anh1/1.jpg">
+            <img src="anh/a/anh1/2.jpg">
+            <img src="anh/a/anh1/3.jpg">
+            <img src="anh/a/anh1/4.jpg">
+            <img src="anh/a/anh1/5.jpg">
+            <img src="anh/a/anh1/6.jpg">
+            <img src="anh/a/anh1/7.jpg">
+            <img src="anh/a/anh1/8.jpg">
+        </div>
+    </div>
+    <div class="section album" id="album5">
+        <div class="image-grid">
+            <img src="images/album5-1.jpg">
+            <img src="images/album5-2.jpg">
+            <img src="images/album5-3.jpg">
+            <img src="images/album5-4.jpg">
+            <img src="images/album5-5.jpg">
+        </div>
+    </div>
+    <div class="section album" id="album6">
+        <div class="image-grid">
+            <img src="images/album6-1.jpg">
+            <img src="images/album6-2.jpg">
+            <img src="images/album6-3.jpg">
+            <img src="images/album6-4.jpg">
+            <img src="images/album6-5.jpg">
+        </div>
+    </div>
+
+    <!-- PHẦN 2 - VIDEO -->
+    <div class="section" id="part2Videos">
+        <video src="video/a1.mp4" controls loop></video>
+        <video src="video/a2.mp4" controls loop></video>
+        <video src="video/a3.mp4" controls loop></video>
+        <video src="video/a4.mp4" controls loop></video>
+        <video src="video/a5.mp4" controls loop></video>
+        <video src="video/a6.mp4" controls loop></video>
+    </div>
+
+    <a class="back-button" href="index.html">← Quay lại</a>
+</body>
+</html>
