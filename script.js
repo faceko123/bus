@@ -48,24 +48,12 @@ document.querySelectorAll('.video-thumb video').forEach(video => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Tự động bật phần ảnh đầu tiên khi trang mới được mở
-    const defaultImageSection = document.querySelector('#part1Images, #specialImages, #part2Images, #part3Images, #part4Images');
-    if (defaultImageSection) defaultImageSection.classList.add('active');
-
-    // Cho phép xem ảnh full khi bấm vào trong album
-    document.querySelectorAll('.album img').forEach(img => {
-        img.addEventListener('click', () => {
-            const full = window.open(img.src, '_blank');
-            if (full) full.focus();
-        });
-    });
-
-    // Cho video đặc biệt hoạt động như yêu cầu
+    // Gán hành vi cho tất cả video trong mục đặc biệt
     document.querySelectorAll('.video-thumb video').forEach(video => {
-        video.loop = true; // Tự lặp lại
-        video.controls = false; // Ẩn controls mặc định
+        video.loop = true; // Cho phép tự động phát lặp lại
+        video.controls = false; // Ẩn controls mặc định ban đầu
 
-        // Click phát/tạm dừng
+        // Khi nhấn vào sẽ phát hoặc dừng
         video.addEventListener('click', () => {
             if (video.paused) {
                 video.play();
@@ -74,11 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Di chuột vào thì hiện controls
+        // Khi di chuột vào video thì hiện controls
         video.addEventListener('mouseenter', () => {
             video.controls = true;
         });
 
+        // Khi rời chuột thì ẩn controls
         video.addEventListener('mouseleave', () => {
             video.controls = false;
         });
