@@ -10,6 +10,7 @@
 
     <!-- Menu chính -->
     <div class="menu" id="mainMenu">
+        <button onclick="showSection('specialMenu')">Phần đặc biệt</button>
         <button onclick="showSection('part1Menu')">Phần 1</button>
         <button onclick="showSection('part2Menu')">Phần 2</button>
         <button onclick="showSection('part3Menu')">Phần 3</button>
@@ -17,6 +18,11 @@
     </div>
 
     <!-- Menu phụ -->
+    <div class="section" id="specialMenu">
+        <button onclick="showSection('specialImages')">Ảnh</button>
+        <button onclick="showSection('specialVideos')">Video</button>
+    </div>
+    
     <div class="section" id="part1Menu">
         <button onclick="showSection('part1Images')">Ảnh</button>
         <button onclick="showSection('part1Videos')">Video</button>
@@ -35,6 +41,24 @@
     <div class="section" id="part4Menu">
         <button onclick="showSection('part4Images')">Ảnh</button>
         <button onclick="showSection('part4Videos')">Video</button>
+    </div>
+
+    <!-- ĐẶC BIỆT - ẢNH -->
+    <div class="section" id="specialImages">
+        <div class="image-grid">
+            <img src="images/special1.jpg">
+            <img src="images/special2.jpg">
+            <img src="images/special3.jpg">
+        </div>
+    </div>
+
+    <!-- ĐẶC BIỆT - VIDEO -->
+    <div class="section" id="specialVideos">
+        <div class="video-grid">
+            <video src="video/special1.mp4" controls loop></video>
+            <video src="video/special2.mp4" controls loop></video>
+            <video src="video/special3.mp4" controls loop></video>
+        </div>
     </div>
 
     <!-- PHẦN 1 - ẢNH -->
