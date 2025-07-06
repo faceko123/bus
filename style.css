@@ -8,7 +8,6 @@ body {
     align-items: center;
     padding: 20px;
 }
-
 .menu, .section {
     display: flex;
     gap: 20px;
@@ -16,7 +15,6 @@ body {
     justify-content: center;
     margin-bottom: 30px;
 }
-
 .menu button, .section button {
     padding: 30px 60px;
     background-color: #333;
@@ -27,26 +25,21 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-
 .menu button:hover, .section button:hover {
     background-color: #555;
 }
-
 .section {
     display: none;
     flex-direction: column;
     align-items: center;
 }
-
 .section.active {
     display: flex;
 }
-
 video {
     width: 75vw;
     margin-bottom: 20px;
 }
-
 .back-button {
     position: fixed;
     top: 20px;
@@ -59,7 +52,6 @@ video {
     cursor: pointer;
     z-index: 1000;
 }
-
 .image-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -67,7 +59,6 @@ video {
     padding: 20px;
     max-width: 1000px;
 }
-
 .image-grid img {
     width: 100%;
     height: auto;
@@ -75,7 +66,6 @@ video {
     object-fit: cover;
     cursor: pointer;
 }
-
 .album img {
     cursor: default;
 }
@@ -86,7 +76,6 @@ video {
     padding: 20px;
     max-width: 1000px;
 }
-
 .video-grid video {
     width: 100%;
     height: auto;
@@ -97,12 +86,8 @@ video {
     width: 100%;
     cursor: pointer;
 }
-
 .video-thumb video {
     width: 100%;
     height: auto;
     border-radius: 10px;
 }
-
-
-
