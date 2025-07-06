@@ -18,13 +18,6 @@ function showSection(id) {
     // Hiện section được chọn
     const section = document.getElementById(id);
     if (section) section.classList.add('active');
-
-    // Nếu là phần đặc biệt video thì đảm bảo phát lại
-    if (id === "specialVideos") {
-        document.querySelectorAll('#specialVideos video').forEach(video => {
-            video.play();
-        });
-    }
 }
 
 function goBack() {
