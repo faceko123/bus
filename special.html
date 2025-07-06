@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Phần đặc biệt</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Phần đặc biệt</h1>
+    
+    <div class="menu">
+        <button onclick="showSection('specialImages')">Ảnh</button>
+        <button onclick="showSection('specialVideos')">Video</button>
+    </div>
+
+    <!-- ĐẶC BIỆT - ẢNH -->
+    <div class="section" id="specialImages">
+        <div class="image-grid">
+            <img src="images/special1.jpg">
+            <img src="images/special2.jpg">
+            <img src="images/special3.jpg">
+        </div>
+    </div>
+
+    <!-- ĐẶC BIỆT - VIDEO -->
+    <div class="section" id="specialVideos">
+        <div class="video-grid">
+            <div class="video-thumb" data-src="video/locket/1.mp4">
+                <video preload="metadata" muted>
+                    <source src="video/locket/1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-thumb" data-src="video/locket/2.mp4">
+                <video preload="metadata" muted>
+                    <source src="video/locket/2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-thumb" data-src="video/locket/3.mp4">
+                <video preload="metadata" muted>
+                    <source src="video/locket/3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-thumb" data-src="video/locket/4.mp4">
+                <video preload="metadata" muted>
+                    <source src="video/locket/4.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-thumb" data-src="video/locket/5.mp4">
+                <video preload="metadata" muted>
+                    <source src="video/locket/5.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-thumb" data-src="video/locket/6.mp4">
+                <video preload="metadata" muted>
+                    <source src="video/locket/6.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-thumb" data-src="video/locket/7.mp4">
+                <video preload="metadata" muted>
+                    <source src="video/locket/7.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-thumb" data-src="video/locket/8.mp4">
+                <video preload="metadata" muted>
+                    <source src="video/locket/8.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-thumb" data-src="video/locket/9.mp4">
+                <video preload="metadata" muted>
+                    <source src="video/locket/9.mp4" type="video/mp4">
+                </video>
+            </div>
+            <!-- thêm các video khác tương tự -->
+        </div>
+    </div>
+
+    <a class="back-button" href="index.html">← Quay lại</a>
+</body>
+</html>
