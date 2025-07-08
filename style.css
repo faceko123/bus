@@ -8,13 +8,25 @@ body {
     align-items: center;
     padding: 20px;
 }
-.menu, .section {
+
+.menu {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 30px;
 }
+
+.section {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.section.active {
+    display: flex;
+}
+
 .menu button, .section button {
     padding: 30px 60px;
     background-color: #333;
