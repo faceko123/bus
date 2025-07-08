@@ -91,3 +91,7 @@ video {
     height: auto;
     border-radius: 10px;
 }
+.album .image-grid {
+    min-height: 600px; /* hoặc height: 600px nếu muốn cứng */
+}
+
