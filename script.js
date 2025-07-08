@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
 document.querySelectorAll('.video-thumb video').forEach(video => {
     video.addEventListener('click', () => {
         // Nếu video đang tạm dừng thì phát, ngược lại thì tạm dừng
@@ -70,4 +71,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
