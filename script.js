@@ -23,11 +23,8 @@ function showAlbum(albumId) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Tự động bật phần ảnh đầu tiên khi trang mới được mở
-    const defaultImageSection = document.querySelector('#part1Images, #specialImages, #part2Images, #part3Images, #part4Images');
-    if (defaultImageSection) defaultImageSection.classList.add('active');
-
-    // Cho phép xem ảnh full khi bấm vào trong album
+    // Không hiển thị gì ban đầu
+    // Chỉ gán sự kiện click cho ảnh trong album
     document.querySelectorAll('.album img').forEach(img => {
         img.addEventListener('click', () => {
             const full = window.open(img.src, '_blank');
