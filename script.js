@@ -1,15 +1,23 @@
 function showSection(id) {
+    const section = document.getElementById(id);
+    const isActive = section.classList.contains('active');
+
+    // Dừng tất cả video
     document.querySelectorAll("video").forEach(video => {
         video.pause();
         video.currentTime = 0;
     });
+
+    // Ẩn tất cả section
     document.querySelectorAll('.section').forEach(section => {
         section.classList.remove('active');
     });
-    const section = document.getElementById(id);
-    if (section) section.classList.add('active');
-}
 
+    // Nếu phần đang mở thì ẩn đi (toggle)
+    if (!isActive) {
+        section.classList.add('active');
+    }
+}
 function goBack() {
     window.location.href = 'index.html'; // hoặc history.back();
 }
@@ -24,8 +32,8 @@ function showAlbum(albumId) {
 
 document.addEventListener('DOMContentLoaded', () => {
     // Tự động bật phần ảnh đầu tiên khi trang mới được mở
-    const defaultImageSection = document.querySelector('#part1Images, #specialImages, #part2Images, #part3Images, #part4Images');
-    if (defaultImageSection) defaultImageSection.classList.add('active');
+    //const defaultImageSection = document.querySelector('#part1Images, #specialImages, #part2Images, #part3Images, #part4Images');
+    //if (defaultImageSection) defaultImageSection.classList.add('active');
 
     // Cho phép xem ảnh full khi bấm vào trong album
     document.querySelectorAll('.album img').forEach(img => {
