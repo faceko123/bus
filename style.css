@@ -92,6 +92,12 @@ video {
     border-radius: 10px;
 }
 .album .image-grid {
-    min-height: 600px; /* hoặc height: 600px nếu muốn cứng */
+    height: 600px;
+    overflow-y: auto;
+}
+.image-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
