@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -11,51 +10,41 @@
     <h1>tiktok</h1>
     
     <div class="menu">
-        <button onclick="showSection('part4Images')">Ảnh</button>
-        <button onclick="showSection('part4Videos')">Video</button>
+        <button onclick="showSection('specialImages')">Ảnh</button>
+        <button onclick="showSection('specialVideos')">Video</button>
     </div>
-    
-    <div class="section" id="part4Images">
+
+    <!-- ĐẶC BIỆT - ẢNH -->
+    <div class="section" id="specialImages">
         <div class="image-grid">
-            <img src="images/thumb7.jpg" onclick="showAlbum('album10')">
-            <img src="images/thumb8.jpg" onclick="showAlbum('album11')">
-            <img src="images/thumb9.jpg" onclick="showAlbum('album12')">
+            <img src="images/special1.jpg">
+            <img src="images/special2.jpg">
+            <img src="images/special3.jpg">
         </div>
     </div>
 
-    <div class="section album" id="album10">
-        <div class="image-grid">
-            <img src="images/album10-1.jpg">
-            <img src="images/album10-2.jpg">
-            <img src="images/album10-3.jpg">
-            <img src="images/album10-4.jpg">
-            <img src="images/album10-5.jpg">
+    <!-- ĐẶC BIỆT - VIDEO -->
+    <div class="section" id="specialVideos">
+        <div class="video-grid">
+            <div class="video-thumb">
+                <video preload="metadata" muted poster="video/locket/1.mp4">
+                    <source src="video/tiktok/1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-thumb" data-src="video/locket/2.mp4">
+                <video preload="metadata" muted controls>
+                    <source src="video/tiktok/2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-thumb" data-src="video/locket/3.mp4">
+                <video preload="metadata" muted controls>
+                    <source src="video/tiktok/3.mp4" type="video/mp4">
+                </video>
+            </div>
+            <!-- thêm các video khác tương tự -->
         </div>
     </div>
-    <div class="section album" id="album11">
-        <div class="image-grid">
-            <img src="images/album11-1.jpg">
-            <img src="images/album11-2.jpg">
-            <img src="images/album11-3.jpg">
-            <img src="images/album11-4.jpg">
-            <img src="images/album11-5.jpg">
-        </div>
-    </div>
-    <div class="section album" id="album12">
-        <div class="image-grid">
-            <img src="images/album12-1.jpg">
-            <img src="images/album12-2.jpg">
-            <img src="images/album12-3.jpg">
-            <img src="images/album12-4.jpg">
-            <img src="images/album12-5.jpg">
-        </div>
-    </div>
-    <div class="section" id="part4Videos">
-        <video src="video/tiktok/1.mp4" controls loop></video>
-        <video src="video/tiktok/2.mp4" controls loop></video>
-        <video src="video/tiktok/3.mp4" controls loop></video>
-    </div>
-    
+
     <a class="back-button" href="index.html">← Quay lại</a>
 </body>
 </html>
