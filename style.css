@@ -84,9 +84,9 @@ video {
 .video-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-    max-width: 1000px;
+    gap: 0; /* ✅ không có khoảng trống */
+    padding: 0; /* ✅ không có padding */
+    max-width: 100%;
 }
 .video-grid video {
     width: 100%;
