@@ -14,64 +14,28 @@
         <button onclick="showSection('specialVideos')">Video</button>
     </div>
 
-    <!-- ĐẶC BIỆT - ẢNH -->
+    <!-- ẢNH -->
     <div class="section" id="specialImages">
         <div class="image-grid">
-            <img src="images/special1.jpg">
-            <img src="images/special2.jpg">
-            <img src="images/special3.jpg">
+            <img src="images/special1.jpg" loading="lazy">
+            <img src="images/special2.jpg" loading="lazy">
+            <img src="images/special3.jpg" loading="lazy">
         </div>
     </div>
 
-    <!-- ĐẶC BIỆT - VIDEO -->
+    <!-- VIDEO -->
     <div class="section" id="specialVideos">
         <div class="video-grid">
-            <div class="video-thumb">
-                <video preload="metadata" muted poster="video/locket/1.mp4">
-                    <source src="video/locket/1.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="video-thumb" data-src="video/locket/2.mp4">
-                <video preload="metadata" muted controls>
-                    <source src="video/locket/2.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="video-thumb" data-src="video/locket/3.mp4">
-                <video preload="metadata" muted controls>
-                    <source src="video/locket/3.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="video-thumb" data-src="video/locket/4.mp4">
-                <video preload="metadata" muted controls>
-                    <source src="video/locket/4.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="video-thumb" data-src="video/locket/5.mp4">
-                <video preload="metadata" muted controls>
-                    <source src="video/locket/5.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="video-thumb" data-src="video/locket/6.mp4">
-                <video preload="metadata" muted controls>
-                    <source src="video/locket/6.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="video-thumb" data-src="video/locket/7.mp4">
-                <video preload="metadata" muted controls>
-                    <source src="video/locket/7.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="video-thumb" data-src="video/locket/8.mp4">
-                <video preload="metadata" muted controls>
-                    <source src="video/locket/8.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="video-thumb" data-src="video/locket/9.mp4">
-                <video preload="metadata" muted controls>
-                    <source src="video/locket/9.mp4" type="video/mp4">
-                </video>
-            </div>
-            <!-- thêm các video khác tương tự -->
+            <!-- Dùng data-src để không tải video ngay -->
+            <div class="video-thumb" data-src="video/locket/1.mp4"><video muted></video></div>
+            <div class="video-thumb" data-src="video/locket/2.mp4"><video muted></video></div>
+            <div class="video-thumb" data-src="video/locket/3.mp4"><video muted></video></div>
+            <div class="video-thumb" data-src="video/locket/4.mp4"><video muted></video></div>
+            <div class="video-thumb" data-src="video/locket/5.mp4"><video muted></video></div>
+            <div class="video-thumb" data-src="video/locket/6.mp4"><video muted></video></div>
+            <div class="video-thumb" data-src="video/locket/7.mp4"><video muted></video></div>
+            <div class="video-thumb" data-src="video/locket/8.mp4"><video muted></video></div>
+            <div class="video-thumb" data-src="video/locket/9.mp4"><video muted></video></div>
         </div>
     </div>
 
