@@ -88,11 +88,13 @@ video {
     padding: 0; /* ✅ không có padding */
     max-width: 100%;
 }
-.video-grid video {
+.video-thumb video {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 0; /* Nếu bạn muốn các cạnh sát nhau */
+    margin: 0;
 }
+
 .video-thumb {
     position: relative;
     width: 100%;
