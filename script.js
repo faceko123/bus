@@ -9,15 +9,43 @@ function showSection(id) {
     });
 
     // Ẩn tất cả section
-    document.querySelectorAll('.section').forEach(section => {
-        section.classList.remove('active');
+    document.querySelectorAll('.section').forEach(sec => {
+        sec.classList.remove('active');
     });
 
     // Nếu phần đang mở thì ẩn đi (toggle)
-    if (!isActive) {
+    if (!isActive && section) {
         section.classList.add('active');
+
+        // Nếu là phần video thì lazy load
+        if (id.includes("Video")) {
+            section.querySelectorAll('.video-thumb').forEach(thumb => {
+                const video = thumb.querySelector('video');
+                const src = thumb.dataset.src;
+
+                // Nếu chưa có src thì gán và gắn sự kiện
+                if (video && src && !video.src) {
+                    video.src = src;
+                    video.loop = true;
+                    video.controls = false;
+
+                    video.addEventListener('click', () => {
+                        video.paused ? video.play() : video.pause();
+                    });
+
+                    video.addEventListener('mouseenter', () => {
+                        video.controls = true;
+                    });
+
+                    video.addEventListener('mouseleave', () => {
+                        video.controls = false;
+                    });
+                }
+            });
+        }
     }
 }
+
 function goBack() {
     window.location.href = 'index.html'; // hoặc history.back();
 }
