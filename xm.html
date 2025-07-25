@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>xm</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>xm</h1>
+    
+    <div class="menu">
+        <button onclick="showSection('xmImages')">Ảnh</button>
+        <button onclick="showSection('xmVideos')">Video</button>
+    </div>
+    
+    <!-- xm - ẢNH -->
+    <div class="section" id="xmImages">
+        <div class="image-grid">
+            <img src="images/thumb7.jpg" onclick="showAlbum('album7')">
+            <img src="images/thumb8.jpg" onclick="showAlbum('album8')">
+            <img src="images/thumb9.jpg" onclick="showAlbum('album9')">
+        </div>
+    </div>
+
+    <div class="section album" id="album7">
+        <div class="image-grid">
+            <img src="images/album7-1.jpg">
+            <img src="images/album7-2.jpg">
+            <img src="images/album7-3.jpg">
+            <img src="images/album7-4.jpg">
+            <img src="images/album7-5.jpg">
+        </div>
+    </div>
+    <div class="section album" id="album8">
+        <div class="image-grid">
+            <img src="images/album8-1.jpg">
+            <img src="images/album8-2.jpg">
+            <img src="images/album8-3.jpg">
+            <img src="images/album8-4.jpg">
+            <img src="images/album8-5.jpg">
+        </div>
+    </div>
+    <div class="section album" id="album9">
+        <div class="image-grid">
+            <img src="images/album9-1.jpg">
+            <img src="images/album9-2.jpg">
+            <img src="images/album9-3.jpg">
+            <img src="images/album9-4.jpg">
+            <img src="images/album9-5.jpg">
+        </div>
+    </div>
+
+    <!-- xm - VIDEO -->
+    <div class="section" id="xmVideos">
+        <video src="video/xm1.mp4" controls loop></video>
+        <video src="video/xm2.mp4" controls loop></video>
+        <video src="video/xm3.mp4" controls loop></video>
+        <video src="video/xm4.mp4" controls loop></video>
+        <video src="video/xm5.mp4" controls loop></video>
+        <video src="video/xm6.mp4" controls loop></video>
+        <video src="video/xm7.mp4" controls loop></video>
+        <video src="video/xm8.mp4" controls loop></video>
+        <video src="video/xm9.mp4" controls loop></video>
+        <video src="video/xm10.mp4" controls loop></video>
+        <video src="video/xm11.mp4" controls loop></video>
+    </div>
+
+    <a class="back-button" href="index.html">← Quay lại</a>
+</body>
+</html>
